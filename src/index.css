@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Pakistan Travel Theme - Deep Forest Green & Warm Earth */
+    --background: 45 30% 97%;
+    --foreground: 160 25% 15%;
+
+    --card: 45 30% 99%;
+    --card-foreground: 160 25% 15%;
+
+    --popover: 45 30% 99%;
+    --popover-foreground: 160 25% 15%;
+
+    /* Deep Forest Green - Primary */
+    --primary: 160 45% 22%;
+    --primary-foreground: 45 30% 97%;
+
+    /* Warm Sand - Secondary */
+    --secondary: 35 40% 92%;
+    --secondary-foreground: 160 25% 15%;
+
+    /* Muted tones */
+    --muted: 45 20% 90%;
+    --muted-foreground: 160 15% 45%;
+
+    /* Saffron/Gold Accent */
+    --accent: 35 85% 55%;
+    --accent-foreground: 160 25% 12%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 45 30% 97%;
+
+    --border: 45 20% 88%;
+    --input: 45 20% 88%;
+    --ring: 160 45% 22%;
+
+    --radius: 0.75rem;
+
+    /* Custom Travel Theme Colors */
+    --mountain: 200 35% 45%;
+    --lake: 185 60% 50%;
+    --earth: 25 45% 35%;
+    --sunset: 15 75% 55%;
+    --forest: 145 40% 30%;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(160 45% 22% / 0.9), hsl(160 45% 22% / 0.6));
+    --gradient-card: linear-gradient(180deg, hsl(45 30% 99%), hsl(45 20% 95%));
+    --gradient-accent: linear-gradient(135deg, hsl(35 85% 55%), hsl(25 80% 50%));
+
+    /* Shadows */
+    --shadow-sm: 0 2px 8px hsl(160 25% 15% / 0.06);
+    --shadow-md: 0 4px 20px hsl(160 25% 15% / 0.08);
+    --shadow-lg: 0 8px 40px hsl(160 25% 15% / 0.12);
+    --shadow-card: 0 4px 24px hsl(160 25% 15% / 0.08);
+    --shadow-card-hover: 0 12px 40px hsl(160 25% 15% / 0.15);
+
+    /* Sidebar */
+    --sidebar-background: 45 30% 97%;
+    --sidebar-foreground: 160 25% 15%;
+    --sidebar-primary: 160 45% 22%;
+    --sidebar-primary-foreground: 45 30% 97%;
+    --sidebar-accent: 45 20% 90%;
+    --sidebar-accent-foreground: 160 25% 15%;
+    --sidebar-border: 45 20% 88%;
+    --sidebar-ring: 160 45% 22%;
+  }
+
+  .dark {
+    --background: 160 25% 8%;
+    --foreground: 45 30% 95%;
+
+    --card: 160 25% 10%;
+    --card-foreground: 45 30% 95%;
+
+    --popover: 160 25% 10%;
+    --popover-foreground: 45 30% 95%;
+
+    --primary: 45 30% 95%;
+    --primary-foreground: 160 25% 12%;
+
+    --secondary: 160 20% 18%;
+    --secondary-foreground: 45 30% 95%;
+
+    --muted: 160 20% 18%;
+    --muted-foreground: 45 20% 65%;
+
+    --accent: 35 85% 55%;
+    --accent-foreground: 160 25% 8%;
+
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 45 30% 95%;
+
+    --border: 160 20% 18%;
+    --input: 160 20% 18%;
+    --ring: 45 30% 85%;
+
+    --sidebar-background: 160 25% 8%;
+    --sidebar-foreground: 45 30% 95%;
+    --sidebar-primary: 35 85% 55%;
+    --sidebar-primary-foreground: 160 25% 8%;
+    --sidebar-accent: 160 20% 15%;
+    --sidebar-accent-foreground: 45 30% 95%;
+    --sidebar-border: 160 20% 18%;
+    --sidebar-ring: 35 85% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .font-sans {
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .gradient-card {
+    background: var(--gradient-card);
+  }
+
+  .gradient-accent {
+    background: var(--gradient-accent);
+  }
+
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+
+  .shadow-card-hover {
+    box-shadow: var(--shadow-card-hover);
+  }
+}
